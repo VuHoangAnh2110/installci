@@ -33,6 +33,7 @@ class Cword extends CI_Controller {
         
     }
 
+// Tải dữ liệu và đưa vào file word 
     public function download_word($page = 1) {
         require_once 'vendor/autoload.php';
         //Không muốn require nhiều lần -> Vào config sửa composer_autoload thành True.
@@ -155,7 +156,8 @@ class Cword extends CI_Controller {
         
     }
 
-    //Có thể sử dụng luôn phpWord để down file pdf 
+//Có thể sử dụng luôn phpWord để down file pdf 
+// Tải dữ liệu và đưa vào file pdf
     public function download_pdf($page = 1) {
         require_once 'vendor/autoload.php';
         $mpdf = new \Mpdf\Mpdf();
@@ -234,6 +236,7 @@ class Cword extends CI_Controller {
 
     }
 
+// Tải dữ liệu và đưa vào file excel
     public function download_excel($page = 1) {
         require_once 'vendor/autoload.php';
         $this->load->model('Mperson');

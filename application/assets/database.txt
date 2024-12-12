@@ -1,0 +1,8 @@
+database: test
+table: person {
+    id: int - auto increment,
+    name: varcahr - 40,
+    birthday: date,
+    sex: int - 1,0 
+    email: varchar - 50
+}

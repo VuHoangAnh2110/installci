@@ -1,10 +1,8 @@
 
-    
     $(document).ready(function(){
         $('#personForm').on('submit', function(e){
             e.preventDefault();
         })
-
         // let dem = 0;
         // if (dem === 0) {
         //     loadtable(1);
@@ -20,7 +18,6 @@
     //         method: 'GET',
     //         data:"",
     //         success:function(response){
-
     //         }
     //     })
     // }
@@ -43,7 +40,7 @@
     //     })
     // }
 
-    // Hiển thị tổng số bản ghi
+// Hiển thị tổng số bản ghi
     function total(totalnumber){
         $.ajax({
             url:'total.php',
@@ -68,7 +65,7 @@
     //     })
     // }
 
-    // Thêm dữ liệu từ form vào database
+// Thêm dữ liệu từ form vào database
     function addmember(event){
         event.preventDefault();
         const ckEmail = check_valid();

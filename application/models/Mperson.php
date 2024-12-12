@@ -1,5 +1,4 @@
 <?php
-
 // Chỉ tương tác cơ sở dữ liệu
 // Không sử lý logic trong model
 
@@ -16,6 +15,7 @@
             return $query->result();
         }
 
+        //Đếm số lượng bản ghi trong bảng qua id
         public function get_count(){
             $this->db->select("ID");
             $this->db->from("person");
@@ -24,6 +24,7 @@
         }
 
         //truy suất có điểm bắt đầu và kết thúc - pagination
+        //lấy 8 bản ghi từ bắt đầu từ id truyền vào
         public function get_8_person($id){
             $limit = 8;
             $start = ($id-1) * $limit;

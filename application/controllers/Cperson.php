@@ -28,10 +28,10 @@ class Cperson extends CI_Controller {
 		// $data["list"] = $this->Mperson->get_person();
 		// $this->load->view('test1/test1', $data);
 
-		$this->pagi(1);
-		
+		$this->pagi(1);		
 	}
 
+//Phân trang với số lượng 8 bản ghi 
 	public function pagi($page = 1){
 		$this->load->model("Mperson");
 		$count1 = $this->Mperson->get_count();
@@ -44,6 +44,7 @@ class Cperson extends CI_Controller {
 		$this->load->view("layout/VLayout", $data1);
 	}
 
+//Thêm dữ liệu vào database
 	public function add(){
 		$this->load->model("Mperson");
 		$name = $this->input->post("name", TRUE);
